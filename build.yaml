@@ -19,7 +19,7 @@
 #
 ---
 include:
-  - board: nrfmicro/nrf52840/zmk
+  - board: arm/nrf52840dongle_nrf52840
     shield: cradio_left
-  - board: nrfmicro/nrf52840/zmk
+  - board: arm/nrf52840dongle_nrf52840
     shield: cradio_right
