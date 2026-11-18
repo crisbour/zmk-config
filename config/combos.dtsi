@@ -1,0 +1,23 @@
+/* Sweep positions: Q..P=0..9, A..quote=10..19, Z../=20..29,
+ * Esc=30, Backspace=31, Space=32, Enter=33.
+ * Glove80 QWERTY combos, adapted to the 34-key alpha block.
+ * The default combo timeout is 50 ms, as on the Glove80 custom combos.
+ */
+compatible = "zmk,combos";
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+combo_##NAME { \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <LAYERS>; \
+    timeout-ms = <50>; \
+};
+
+COMBO(caps, &kp CAPSLOCK, 12 17 32 32, BASE_L)
+COMBO(enter, &kp ENTER, 17 18, BASE_L)
+COMBO(backspace, &kp CAPSLOCK, 7 8, BASE_L)
+COMBO(semi, &kp LS(SEMI), 16 17, BASE_L)
+COMBO(escape, &kp ESC, 11 12, BASE_L)
+COMBO(vsplit, &macro_vsplit, 14 15, BASE_L)
+COMBO(caret, &kp LS(N6), 26 27, BASE_L)
+COMBO(dollar, &kp LS(N4), 27 28, BASE_L)
+COMBO(save, &macro_save, 12 13, BASE_L)
