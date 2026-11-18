@@ -205,7 +205,7 @@
             bindings = <
                 &trans  &kp L      &kp M       &kp P          &kp U         &kp HOME         &kp PG_DN      &kp PG_UP   &kp END    &trans
                 &trans  &kp ESC    &kp TAB     &kp CAPS       &kp DEL       &kp LEFT         &kp DOWN       &kp UP      &kp RIGHT  &kp LS(SEMI)
-                &vim_snap &vim_ss &kp PSCREEN &vim_diff   &vim_save  &trans        &tmux_pane_d &tmux_pane_u &tmux_pane_l &tmux_pane_r
+                &vim_snap &vim_ss &kp PSCRN &vim_diff   &vim_save  &trans        &tmux_pane_d &tmux_pane_u &tmux_pane_l &tmux_pane_r
                                                   &trans      &trans      &trans        &mo MEDIA_L
             >;
         };
