@@ -39,85 +39,114 @@
             quick-tap-ms = <200>;
             bindings = <&kp>, <&mo>;
         };
+    };
+
+    macros {
 
         /* Vim commands as single key behaviors */
         vim_vsplit: vim_vsplit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp COLON>, <&kp V>, <&kp S>, <&kp P>, <&kp L>, <&kp I>, <&kp T>, <&kp ENTER>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ESC &kp COLON &kp V &kp S &kp P &kp L &kp I &kp T &kp ENTER>;
         };
 
         vim_save: vim_save {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp COLON>, <&kp W>, <&kp ENTER>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ESC &kp COLON &kp W &kp ENTER>;
         };
 
         vim_gvd: vim_gvd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp COLON>, <&kp G>, <&kp V>, <&kp D>, <&kp I>, <&kp F>, <&kp F>, <&kp S>, <&kp P>, <&kp L>, <&kp I>, <&kp T>, <&kp ENTER>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ESC &kp COLON &kp G &kp V &kp D &kp I &kp F &kp F &kp S &kp P &kp L &kp I &kp T &kp ENTER>;
         };
 
         vim_snap: vim_snap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp PSCREEN>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp LGUI &kp PSCREEN>;
         };
 
         vim_ss: vim_ss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp LSHFT>, <&kp PSCREEN>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp LGUI &kp LSHFT &kp PSCREEN>;
         };
 
         vim_diff: vim_diff {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp LCTRL>, <&kp PSCREEN>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp LGUI &kp LCTRL &kp PSCREEN>;
         };
 
         /* Tmux commands */
         tmux_new: tmux_new {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp N>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp LCTRL &kp B &kp N>;
         };
 
         tmux_prev: tmux_prev {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp P>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp LCTRL &kp B &kp P>;
         };
 
         tmux_next: tmux_next {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp N>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp LCTRL &kp B &kp N>;
         };
 
         tmux_pane_l: tmux_pane_l {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp H>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp LCTRL &kp B &kp H>;
         };
 
         tmux_pane_r: tmux_pane_r {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp L>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp LCTRL &kp B &kp L>;
         };
 
         tmux_pane_d: tmux_pane_d {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp J>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp LCTRL &kp B &kp J>;
         };
 
         tmux_pane_u: tmux_pane_u {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp K>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp LCTRL &kp B &kp K>;
         };
     };
 
