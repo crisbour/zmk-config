@@ -43,6 +43,21 @@
     };
 
     macros {
+        web_prev: web_prev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp LEFT>,  <&macro_release &kp LALT>;
+        };
+
+        web_next: web_next {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp RIGHT>,  <&macro_release &kp LALT>;
+        };
 
         /* Vim commands as single key behaviors */
         vim_vsplit: vim_vsplit {
@@ -99,7 +114,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&kp LCTRL &kp B &kp N>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp B>,  <&macro_release &kp LCTRL>, <&macro_tap &kp C>;
         };
 
         tmux_prev: tmux_prev {
@@ -107,7 +122,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&kp LCTRL &kp B &kp P>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp B>,  <&macro_release &kp LCTRL>, <&macro_tap &kp P>;
         };
 
         tmux_next: tmux_next {
@@ -115,7 +130,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&kp LCTRL &kp B &kp N>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp B>,  <&macro_release &kp LCTRL>, <&macro_tap &kp N>;
         };
 
         tmux_pane_l: tmux_pane_l {
@@ -123,7 +138,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&kp LCTRL &kp B &kp H>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp B>,  <&macro_release &kp LCTRL>, <&macro_tap &kp H>;
         };
 
         tmux_pane_r: tmux_pane_r {
@@ -131,7 +146,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&kp LCTRL &kp B &kp L>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp B>,  <&macro_release &kp LCTRL>, <&macro_tap &kp L>;
         };
 
         tmux_pane_d: tmux_pane_d {
@@ -139,7 +154,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&kp LCTRL &kp B &kp J>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp B>,  <&macro_release &kp LCTRL>, <&macro_tap &kp J>;
         };
 
         tmux_pane_u: tmux_pane_u {
@@ -147,7 +162,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&kp LCTRL &kp B &kp K>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp B>,  <&macro_release &kp LCTRL>, <&macro_tap &kp K>;
         };
     };
 
@@ -179,7 +194,7 @@
                 &kp F1     &kp F2     &kp F3      &kp F4         &kp FSLH      &kp LS(N8)       &kp N7         &kp N8      &kp N9     &kp MINUS
                 &kp F5     &kp F6     &kp F7      &kp F8         &trans     &kp N0           &kp N4         &kp N5      &kp N6     &kp LS(EQUAL)
                 &kp F9     &kp F10    &kp F11     &kp F12        &kp COMMA     &kp DOT          &kp N1         &kp N2      &kp N3     &trans
-                                                  &trans &trans &trans &trans
+                                                  &mo MEDIA_L &trans &trans &trans
             >;
         };
 
@@ -193,7 +208,7 @@
                 &kp LS(N1) &kp LS(N2) &kp LS(N3)  &kp LS(N4)     &kp LS(N5)    &kp LS(N6)       &kp LS(N7)     &kp LS(N8)  &kp GRAVE  &kp LS(GRAVE)
                 &kp LS(SQT)&kp LS(COMMA)&kp LS(N9)&kp LBKT       &kp LS(LBKT)  &kp N0           &kp MINUS      &kp EQUAL   &kp LS(BSLH)&kp LS(SEMI)
                 &kp SQT    &kp LS(DOT)&kp LS(N0) &kp RBKT       &kp LS(RBKT)  &kp LS(N4)       &kp LS(MINUS)  &kp LS(EQUAL)&kp BSLH  &kp LS(FSLH)
-                                                  &mo MEDIA_L &lt MACRO_L SPACE &trans &trans
+                                                  &trans &mo MACRO_L &trans &trans
             >;
         };
 
@@ -206,7 +221,7 @@
             bindings = <
                 &trans  &kp L      &kp M       &kp P          &kp U         &kp HOME         &kp PG_DN      &kp PG_UP   &kp END    &trans
                 &trans  &kp ESC    &kp TAB     &kp CAPS       &kp DEL       &kp LEFT         &kp DOWN       &kp UP      &kp RIGHT  &kp LS(SEMI)
-                &vim_snap &vim_ss &kp PSCRN &vim_diff   &vim_save  &trans        &tmux_pane_d &tmux_pane_u &tmux_pane_l &tmux_pane_r
+                &vim_snap &vim_ss &kp PSCRN &vim_diff   &vim_save  &trans   &web_prev &web_next &trans &trans
                                                   &trans      &trans      &trans        &mo MEDIA_L
             >;
         };
