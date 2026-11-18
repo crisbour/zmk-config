@@ -164,7 +164,7 @@
                 &kp Q      &kp W      &kp E       &kp R          &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P
                 &hm LCTL A &hm LSHFT S &kp D       &kp F          &kp G         &kp H            &kp J  &kp K &kp L &hm LCTRL SQT
                 &kp Z      &kp X      &hm LGUI C       &hm LALT V          &kp B         &kp N            &hm LALT M          &hm LGUI COMMA   &kp DOT    &kp FSLH
-                                                  &lt NAV_L TAB  &hm LSHFT ENTER &lt SYM_L SPACE  &lt NUM_L BSPC
+                                                  &lt NAV_L TAB  &hm LSHFT SPACE &lt SYM_L BSPC &lt NUM_L ENTER
             >;
         };
 
