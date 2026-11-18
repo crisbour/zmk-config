@@ -130,7 +130,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp B>,  <&macro_release &kp LCTRL>, <&macro_tap &kp M>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp B>,  <&macro_release &kp LCTRL>, <&macro_tap &kp P>;
         };
 
         tmux_next: tmux_next {
@@ -138,7 +138,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp B>,  <&macro_release &kp LCTRL>, <&macro_tap &kp COMMA>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp B>,  <&macro_release &kp LCTRL>, <&macro_tap &kp N>;
         };
 
         tmux_pane_l: tmux_pane_l {
