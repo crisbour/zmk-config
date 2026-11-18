@@ -73,7 +73,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&kp LGUI &kp PSCREEN>;
+            bindings = <&kp LGUI &kp PSCRN>;
         };
 
         vim_ss: vim_ss {
@@ -81,7 +81,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&kp LGUI &kp LSHFT &kp PSCREEN>;
+            bindings = <&kp LGUI &kp LSHFT &kp PSCRN>;
         };
 
         vim_diff: vim_diff {
@@ -89,7 +89,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&kp LGUI &kp LCTRL &kp PSCREEN>;
+            bindings = <&kp LGUI &kp LCTRL &kp PSCRN>;
         };
 
         /* Tmux commands */
