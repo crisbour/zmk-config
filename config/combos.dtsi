@@ -4,6 +4,7 @@
  * The default combo timeout is 50 ms, as on the Glove80 custom combos.
  */
 compatible = "zmk,combos";
+
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
 combo_##NAME { \
     bindings = <BINDINGS>; \

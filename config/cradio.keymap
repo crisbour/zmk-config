@@ -40,24 +40,6 @@
             bindings = <&kp>, <&mo>;
         };
 
-        /* Macro behavior for vim/tmux commands */
-        macro: macro_behavior {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-        };
-
-        /* Macro with release behavior */
-        macro_release: macro_release_behavior {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <2>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-        };
-    };
-
-    macros {
         /* Vim commands as single key behaviors */
         vim_vsplit: vim_vsplit {
             compatible = "zmk,behavior-macro";
@@ -80,62 +62,62 @@
         vim_snap: vim_snap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp PSCREEN>, <&up LGUI>;
+            bindings = <&kp LGUI>, <&kp PSCREEN>;
         };
 
         vim_ss: vim_ss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp LSHFT>, <&kp PSCREEN>, <&up LSHFT>, <&up LGUI>;
+            bindings = <&kp LGUI>, <&kp LSHFT>, <&kp PSCREEN>;
         };
 
         vim_diff: vim_diff {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp LCTRL>, <&kp PSCREEN>, <&up LCTRL>, <&up LGUI>;
+            bindings = <&kp LGUI>, <&kp LCTRL>, <&kp PSCREEN>;
         };
 
         /* Tmux commands */
         tmux_new: tmux_new {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp N>, <&up LCTRL>;
+            bindings = <&kp LCTRL>, <&kp B>, <&kp N>;
         };
 
         tmux_prev: tmux_prev {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp P>, <&up LCTRL>;
+            bindings = <&kp LCTRL>, <&kp B>, <&kp P>;
         };
 
         tmux_next: tmux_next {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp N>, <&up LCTRL>;
+            bindings = <&kp LCTRL>, <&kp B>, <&kp N>;
         };
 
         tmux_pane_l: tmux_pane_l {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp H>, <&up LCTRL>;
+            bindings = <&kp LCTRL>, <&kp B>, <&kp H>;
         };
 
         tmux_pane_r: tmux_pane_r {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp L>, <&up LCTRL>;
+            bindings = <&kp LCTRL>, <&kp B>, <&kp L>;
         };
 
         tmux_pane_d: tmux_pane_d {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp J>, <&up LCTRL>;
+            bindings = <&kp LCTRL>, <&kp B>, <&kp J>;
         };
 
         tmux_pane_u: tmux_pane_u {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp B>, <&kp K>, <&up LCTRL>;
+            bindings = <&kp LCTRL>, <&kp B>, <&kp K>;
         };
     };
 
@@ -194,7 +176,7 @@
             bindings = <
                 &trans  &kp L      &kp M       &kp P          &kp U         &kp HOME         &kp PG_DN      &kp PG_UP   &kp END    &trans
                 &trans  &kp ESC    &kp TAB     &kp CAPS       &kp DEL       &kp LEFT         &kp DOWN       &kp UP      &kp RIGHT  &kp LS(SEMI)
-                &kp VIM_SNAP &kp VIM_SS &kp PSCREEN &kp VIM_DIFF   &kp VIM_SAVE  &trans        &kp TMUX_PANE_D &kp TMUX_PANE_U &kp TMUX_PANE_L &kp TMUX_PANE_R
+                &vim_snap &vim_ss &kp PSCREEN &vim_diff   &vim_save  &trans        &tmux_pane_d &tmux_pane_u &tmux_pane_l &tmux_pane_r
                                                   &trans      &trans      &trans        &mo MEDIA_L
             >;
         };
@@ -207,8 +189,8 @@
             display-name = "Macro";
             bindings = <
                 &trans  &trans  &trans   &trans      &trans     &trans        &trans      &trans   &trans  &trans
-                &trans  &trans  &trans   &trans      &trans     &kp TMUX_NEW     &kp TMUX_PREV  &kp TMUX_NEXT &trans &trans
-                &trans  &kp VIM_GVD &trans  &trans      &trans     &trans        &kp TMUX_PANE_J &kp TMUX_PANE_K &trans &trans
+                &trans  &trans  &trans   &trans      &trans     &tmux_new     &tmux_prev  &tmux_next &trans &trans
+                &trans  &vim_gvd &trans  &trans      &trans     &trans        &tmux_pane_d &tmux_pane_u &trans &trans
                                                   &trans      &trans      &trans        &trans
             >;
         };
