@@ -245,9 +245,9 @@
         symbol {
             display-name = "Symbol";
             bindings = <
-                &kp LS(N1) &kp LS(N2) &kp LS(N3)  &kp LS(N4)     &kp LS(N5)    &kp LS(N6)       &kp LS(N7)     &kp LS(N8)  &kp GRAVE  &kp LS(GRAVE)
-                &kp LS(SQT)&kp LS(COMMA)&kp LS(N9)&kp LBKT       &kp LS(LBKT)  &kp N0           &kp MINUS      &kp EQUAL   &kp LS(BSLH)&kp LS(SEMI)
-                &kp SQT    &kp LS(DOT)&kp LS(N0) &kp RBKT       &kp LS(RBKT)  &kp LS(N4)       &kp LS(MINUS)  &kp LS(EQUAL)&kp BSLH  &kp LS(FSLH)
+                &kp LS(GRAVE) &kp LS(SQT) &kp LS(LBKT) &kp LS(RBKT) &kp LS(N5)    &kp LS(COMMA) &kp LBKT  &kp LRBKT &kp SQT
+                &kp GRAVE &kp LS(N3) &kp LS(N9) &kp LS(N0) &kp LS(N6)             &kp LS(N4) &kp MINUS      &kp EQUAL     &kp LS(BSLH) &kp LS(SEMI)
+                &trans    &kp LS(1) &kp LS(N7) &mt LALT LS(N8) &kp N0             &kp LS(N2) &kp LS(MINUS)  &kp LS(EQUAL) &kp BSLH  &kp LS(FSLH)
                                                   &trans &mo MACRO_L &trans &trans
             >;
         };
