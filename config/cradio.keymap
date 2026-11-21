@@ -220,7 +220,7 @@
       #include "combos.dtsi"
       /* Combo: Space + Backspace -> MACRO_L */
       space_backspace_macro {
-          timeout-ms = <50>; /* Time window to press both keys */
+          timeout-ms = <500>; /* Time window to press both keys */
           bindings = <&mo MACRO_L>;
           key-positions = <31 32>;
       };
