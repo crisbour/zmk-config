@@ -248,7 +248,7 @@
             display-name = "Function";
             bindings = <
                 &kp F1      &kp F2  &kp F3  &kp F4  &kp FSLH     &kp ASTRK &kp N7 &kp N8 &kp N9 &kp EQUAL
-                &kp F5      &kp F6  &kp F7  &kp F8  &lp MINUS    &kp PLU   &kp N4 &kp N5 &kp N6 &kp N0
+                &kp F5      &kp F6  &kp F7  &kp F8  &lp MINUS    &kp PLUS  &kp N4 &kp N5 &kp N6 &kp N0
                 &kp F9      &kp F10 &kp F11 &kp F12 &kp COMMA    &kp DOT   &kp N1 &kp N2 &kp N3 &kp N0
                 &mo MEDIA_L &trans  &trans  &trans
             >;
